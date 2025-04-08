@@ -105,6 +105,22 @@ body.dark-mode .activity-card {
   margin-bottom: 5px;
 }
 
+.participants-list {
+  margin-top: 10px;
+  padding-left: 20px;
+  list-style-type: disc;
+  color: #333;
+}
+
+body.dark-mode .participants-list {
+  color: #ccc;
+}
+
+.participants-list li {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
 .form-group {
   margin-bottom: 15px;
 }
