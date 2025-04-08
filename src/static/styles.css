@@ -15,6 +15,11 @@ body {
   background-color: #f5f5f5;
 }
 
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
 header {
   text-align: center;
   padding: 20px 0;
@@ -22,6 +27,10 @@ header {
   background-color: #1a237e;
   color: white;
   border-radius: 5px;
+}
+
+body.dark-mode header {
+  background-color: #333;
 }
 
 header h1 {
@@ -37,6 +46,7 @@ main {
 
 @media (min-width: 768px) {
   main {
+    display: grid;
     grid-template-columns: 2fr 1fr;
   }
 }
@@ -48,6 +58,11 @@ section {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 500px;
+}
+
+body.dark-mode section {
+  background-color: #1e1e1e;
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
 }
 
 section h3 {
@@ -65,6 +80,11 @@ section h3 {
   background-color: #f9f9f9;
 }
 
+body.dark-mode .activity-card {
+  background-color: #2a2a2a;
+  border-color: #444;
+}
+
 .activity-card h4 {
   margin-bottom: 10px;
   color: #0066cc;
@@ -72,6 +92,33 @@ section h3 {
 
 .activity-card p {
   margin-bottom: 8px;
+}
+
+.activity-card ul {
+  margin-top: 10px;
+  padding-left: 20px;
+  list-style-type: disc;
+  color: #555;
+}
+
+.activity-card ul li {
+  margin-bottom: 5px;
+}
+
+.participants-list {
+  margin-top: 10px;
+  padding-left: 20px;
+  list-style-type: disc;
+  color: #333;
+}
+
+body.dark-mode .participants-list {
+  color: #ccc;
+}
+
+.participants-list li {
+  margin-bottom: 5px;
+  font-size: 14px;
 }
 
 .form-group {
@@ -104,8 +151,16 @@ button {
   transition: background-color 0.2s;
 }
 
+body.dark-mode button {
+  background-color: #444;
+}
+
 button:hover {
   background-color: #3949ab;
+}
+
+body.dark-mode button:hover {
+  background-color: #555;
 }
 
 .message {
@@ -134,6 +189,24 @@ button:hover {
 
 .hidden {
   display: none;
+}
+
+.dark-mode-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #1a237e;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.dark-mode-toggle:hover {
+  background-color: #3949ab;
 }
 
 footer {
